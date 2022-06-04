@@ -1,3 +1,3 @@
 # rsschool-cv
 
-Deploy: https://pollynooon.github.io/rsschool-cv/cv
+Deploy: https://pollynooon.github.io/rsschool-cv/
