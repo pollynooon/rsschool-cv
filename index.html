@@ -1,1 +1,99 @@
-тут будет разметка
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noon CV</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <Ul>
+                <li>About me</li>
+                <li>Skils</li>
+                <li>Code</li>
+                <li>Education</li>
+                <li>Contats</li>
+            </Ul>
+        </nav>
+    </header>
+    <main>
+        <img src="myphoto.jpg" alt="My fhoto" width="320">
+        <section>
+            <h2>Contats</h2>
+            <ul>
+                <li>Email: <a href="mailto:ms-lis@mail.ru">ms-lis@mail.ru</a></li>
+                <li>Telegram: <a href="https://t.me/polynoon"target="_blank">@pollynoon</a></li>
+                <li>GitHub:<a href="https://github.com/pollynooon" target="_blank">@pollynooon</a></li>
+                <li>Discord: noon(pollynooon)#2435</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+        <h1>Simashkina irina</h1>
+        <span>Junior Frontend Developer</span>
+        <section>
+            <h2>About Me</h2>
+            <p>A trainee frontend developer. I have no experience, but I like to learn new thing. I am taking a frontend course at RS School. My English level is A1.</p>
+        </section>
+        <section>
+            <h2>Projects</h2>
+            <section>
+                <h3>My CV</h3>
+                <p>My first project on Rolling Scopes School frontend course</p>
+                <a href="link"></a>
+            </section>
+        </section>
+        <section>
+            <h2>Code example</h2>
+            <code><pre>
+                function decode(expr) {
+                    const splitedExpr = expr.split('');
+                    let stash = [];
+                    let result = [];
+                  
+                    function recursion(startIndex, endIndex) {
+                      stash = [];
+                  
+                      if (startIndex === expr.length) return;
+                  
+                      for (let i = startIndex; i < endIndex; i = i + 2) {
+                        if (splitedExpr[i] + splitedExpr[i + 1] === '10') stash.push('.');
+                  
+                        if (splitedExpr[i] + splitedExpr[i + 1] === '11') stash.push('-');
+                  
+                        if (splitedExpr[i] === '*') {
+                          result.push(' ');
+                          return recursion(startIndex + 10, endIndex + 10);
+                        }
+                      }
+                  
+                      for (key in MORSE_TABLE) {
+                        if (key === stash.join('')) {
+                          result.push(MORSE_TABLE[key]);
+                        } 
+                      }
+                      recursion(startIndex + 10, endIndex + 10);
+                    }
+                  
+                    recursion(0, 10);
+                  
+                    return result.join('');
+                  }
+            </pre></code>
+        </section>
+    </main>
+    <footer>
+       <span>GitHub:<a href="https://github.com/pollynooon" target="_blank">@pollynooon</a></span>
+       <span><img src="https://rs.school/images/rs_school_js.svg" height="20"></span>
+       <span><a href="https://rs.school/js/">Курс «JavaScript/Front-end»</a></span>
+    </footer>
+</body>
+</html>
