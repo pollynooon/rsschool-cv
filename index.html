@@ -1,1 +1,111 @@
-тут будет разметка
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noon CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800;500&family=Quattrocento+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <Ul class="list">
+                <li class="menu-list-item"><a href="#about-me">About me</a></li>
+                <li class="menu-list-item"><a href="#skills">Skills</a></li>
+                <li class="menu-list-item"><a href="#code">Code</a></li>
+                <!-- <li class="menu-list-item">Education</li> -->
+                <li class="menu-list-item"><a href="#projects">Projects</a></li>
+                <li class="menu-list-item"><a href="#contacts">Contacts</a></li>
+            </Ul>
+        </nav>
+    </header>
+    <main class="main-container">
+        <div class="left-side">
+        <div class="foto-container"><img src="myphoto.jpg" alt="My fhoto" width="280"></div>
+        <section id="contacts" class="section-container">
+            <h2 class="section-title">Contacts</h2>
+            <ul class="contact-list">
+                <li title="email" class="contact-list-item email"><a href="mailto:ms-lis@mail.ru">ms-lis@mail.ru</a></li>
+                <li title="telegram" class="contact-list-item telegram"><a href="https://t.me/polynoon" target="_blank">@pollynoon</a></li>
+                <li title="github" class="contact-list-item github-icon"><a href="https://github.com/pollynooon" target="_blank">@pollynooon</a></li>
+                <li title="diccord" class="contact-list-item diccord">noon(pollynooon)#2435</li>
+            </ul>
+        </section>
+        <section id="skills" class="section-container">
+            <h2 class="section-title">Skills</h2>
+            <ul class="u-list">
+                <li class="u-list-item">HTML</li>
+                <li class="u-list-item">CSS</li>
+                <li class="u-list-item">JavaScript</li>
+            </ul>
+        </section>
+    </div>
+    <div class="right-side">
+        <h1 class="main-title"><span class="main-title-small">Simashkina</span><br>Irina</h1>
+        <div class="divider"></div>
+        <span>Junior Frontend Developer</span>
+        <section id="about-me">
+            <h2 class="section-title">About Me</h2>
+            <p>A trainee frontend developer. I have no experience, but I like to learn new thing. I am taking a frontend course at RS School. My English level is A1.</p>
+        </section>
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <section class="project">
+                    <h3 class="project-title">My CV</h3>
+                    <p class="project-desc">My first project on Rolling Scopes School frontend course</p>
+                    <a class="project-link" href="https://pollynooon.github.io/rsschool-cv/" target="_blank"></a>
+            </section>
+        </section>
+        <section id="code">
+            <h2 class="section-title">Code example</h2>
+            <pre><code class="code">
+function decode(expr) {
+const splitedExpr = expr.split('');
+let stash = [];
+let result = [];
+                  
+function recursion(startIndex, endIndex) {
+  stash = [];
+                  
+  if (startIndex === expr.length) return;
+                  
+  for (let i = startIndex; i &lt; endIndex; i = i + 2) {
+    if (splitedExpr[i] + splitedExpr[i + 1] === '10') stash.push('.');
+                  
+    if (splitedExpr[i] + splitedExpr[i + 1] === '11') stash.push('-');
+                  
+    if (splitedExpr[i] === '*') {
+      result.push(' ');
+      return recursion(startIndex + 10, endIndex + 10);
+    }
+  }
+                  
+  for (key in MORSE_TABLE) {
+    if (key === stash.join('')) {
+      result.push(MORSE_TABLE[key]);
+    } 
+  }
+  recursion(startIndex + 10, endIndex + 10);
+}
+                  
+recursion(0, 10);
+                  
+return result.join('');
+}                
+            </code></pre>
+        </section>
+    </div>
+    </main>
+    <footer>
+        <ul class="list">
+            <li class="footer-list-item"><a class="github" href="https://github.com/pollynooon" target="_blank">My GitHub</a></li>
+            <li class="footer-list-item">2022</li>
+            <li class="footer-list-item"><a href="https://rs.school/js/"><img src="https://rs.school/images/rs_school_js.svg" height="20" alt="Курс «JavaScript/Front-end»"></a></li>
+        </ul>
+    </footer>
+</body>
+</html>

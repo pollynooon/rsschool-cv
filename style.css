@@ -1,1 +1,170 @@
-здесь будут стили
+:root{
+font-family: 'Quattrocento Sans', sans-serif;
+--cultured: #F7F7F7ff;
+--flame: #DA5328ff;
+--platinum: #E4E4E4ff;
+--raisin-black: #22222Dff;
+--silver: #C2C2C2ff;
+--battleship-grey: #848484ff;
+--white: #FFFFFFff;
+}
+body{
+    color: var(--raisin-black);
+    margin: 0;
+    background-color: var(--battleship-grey);
+}
+nav a{
+    color: var(--raisin-black);
+    text-decoration: none;
+}
+.menu{
+    /* background-color:var(--silver); */
+}
+.list{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    list-style-type: none;
+    background-color: var(--silver);
+    padding: 0;
+}
+.contact-list{
+list-style-type: none;
+}
+.contact-list-item::before{
+    position: absolute;
+    left: -30px;
+    top: 0px;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-size: contain;   
+}
+.telegram::before{
+    background-image: url("telegram-svgrepo-com.svg");
+}
+.email::before{
+    background-image: url("email-svgrepo-com.svg"); 
+}
+.diccord::before{
+    background-image: url("discord-fill-svgrepo-com.svg");
+}
+.github-icon::before{
+    background-image: url("github-svgrepo-com.svg");
+}
+.contact-list-item{
+    position: relative;
+    margin: 5px 0;
+}
+.u-list-item::marker{
+    color: var(--flame);
+    font-size: 1.2em;
+}
+.u-list{
+    padding-left: 30px;
+}
+.menu-list-item{
+    padding: 10px;
+}
+.menu-list-item:hover{
+    background-color: var(--platinum);
+}
+.foto-container{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color:var(--flame) ;
+}
+.main-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+.right-side{
+min-width: 20%;
+padding-right: 20px;
+padding-left: 20px;
+background-color: var(--white);
+}
+.left-side{
+    flex-grow: 0;
+    background-color: var(--platinum);
+    /* width: 40%; */
+}
+.section-container{
+    margin-left: 20px;
+}
+.section-title{
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}
+.main-title{
+    font-family: 'Cinzel', serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.main-title-small{
+    font-weight: 500;
+}
+.footer-list-item{
+    padding: 10px;
+    font-weight: 600;
+    position: relative;
+}
+.github::before{
+position: absolute;
+left: 0;
+top: 5px;
+content: "";
+height: 25px;
+width: 25px;
+background-image: url("github-logo.svg");
+background-size: contain;
+}
+.github{
+    padding-left: 20px;
+    color: var(--raisin-black);
+}
+.divider{
+    margin-top: -15px;
+    margin-bottom: 10px;
+    height: 3px;
+    width: 70px;
+    background-color: var(--flame);
+}
+.code{
+    overflow-x: scroll;
+}
+.project{
+    width: 300px;
+    border: 1px solid var(--battleship-grey);
+    padding: 15px;
+    background-color: var(--platinum);
+}
+.project-title{
+    margin: 0;
+}
+.project-bg{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 5px;
+    border: 1px solid var(--silver);
+}
+.project-link{
+    display: block;
+    height: 120px;
+    width: 290px;
+    background-image: url("projectCV.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 2s;
+    }
+.project-link:hover{
+    transform: scale(1.1);
+}
